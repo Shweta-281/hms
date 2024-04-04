@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
 import Sidebar from '../GlobalFiles/Sidebar'
-import { ToastContainer } from 'react-toastify'
+import { ToastContainer, toast } from 'react-toastify'
 import { Navigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import "react-toastify/dist/ReactToastify.css";
+import {CreateReport} from "../../Redux/Data/action";
+
+const notify = (text) => toast(text);
 
 const Discharge_and_Create_Slip = () => {
   const { data } = useSelector((store) => store.auth);

@@ -3,6 +3,7 @@ import * as types from "./types";
 const initialState = {
   loading: false,
   error: false,
+  reports: [],
   beds: [],
   doctors: [],
   patients: [],
@@ -37,6 +38,14 @@ export default function dataReducer(state = initialState, { type, payload }) {
         dashboard: payload,
       };
     case types.DISCHARGE_PATIENT_SUCCESS:
+      // eslint-disable-next-line no-case-declarations
+      let data = state.beds.map((ele) => {
+        if (ele._id === payload.bed._id) {
+          return payload.bed;
+        }
+        return ele;
+      });
+    // eslint-disable-next-line no-fallthrough
     case types.DELETE_APPOINTMENT_SUCCESS:
       return {
         ...state,

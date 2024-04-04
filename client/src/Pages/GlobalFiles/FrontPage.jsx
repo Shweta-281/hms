@@ -5,8 +5,6 @@ import { FaUserNurse } from "react-icons/fa";
 import { RiEmpathizeLine } from "react-icons/ri";
 import { FaBed } from "react-icons/fa";
 import { FaAmbulance } from "react-icons/fa";
-import { BsFillBookmarkCheckFill } from "react-icons/bs";
-import { MdPayment } from "react-icons/md";
 import { RiAdminLine } from "react-icons/ri";
 import Sidebar from "./Sidebar";
 import "./CommonCSS.css";
@@ -18,7 +16,7 @@ const FrontPage = () => {
   const columns = [
     { title: "Name", dataIndex: "patientName", key: "patientName" },
     { title: "Age", dataIndex: "age", key: "age" },
-    { title: "Contact", dataIndex: "contact", key: "contact" },
+    { title: "Mobile", dataIndex: "mobile", key: "mobile" },
     { title: "Disease", dataIndex: "disease", key: "disease" },
     { title: "Blood Group", dataIndex: "bloodGroup", key: "bloodGroup" },
     { title: "Department", dataIndex: "department", key: "department" },
