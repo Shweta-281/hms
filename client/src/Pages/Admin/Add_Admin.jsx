@@ -5,7 +5,7 @@ import Sidebar from "../GlobalFiles/Sidebar"
 import admin from "../../assets/admin.png";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 const notify = (text) => toast(text);
 
 const Add_Admin = () => {
@@ -48,6 +48,8 @@ const Add_Admin = () => {
       }
       notify("Admin Added");
 
+      alert(`Your Admin ID, please save it ${res.data.adminID}`)
+
       let data = {
         email: res.data.email,
         password: res.data.password,
@@ -56,13 +58,18 @@ const Add_Admin = () => {
       dispatch(SendPassword(data)).then((res) => notify("Account Detais Sent"));
       setloading(false);
       setAdminValue(InitData);
-      navigate("/")
+      navigate("/login")
     });
   };
 
   if (data?.isAuthticated === false) {
-    navigate('/');
+    return <Navigate to={"/login"} />;
   }
+
+  if (data?.user.userType !== "admin") {
+    return <Navigate to={"/dashboard"} />;
+  }
+
 
   return (
     <>

@@ -62,7 +62,7 @@ const Book_Appointment = () => {
   };
 
   if (data?.isAuthticated === false) {
-    return <Navigate to={"/"} />;
+    return <Navigate to={"/login"} />;
   }
 
   if (data?.user.userType !== "nurse") {

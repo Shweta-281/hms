@@ -39,7 +39,7 @@ const Add_Beds = () => {
   };
 
   if (data?.isAuthticated === false) {
-    return <Navigate to={"/"} />;
+    return <Navigate to={"/login"} />;
   }
 
   if (data?.user.userType !== "admin") {

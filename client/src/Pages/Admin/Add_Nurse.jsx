@@ -73,7 +73,7 @@ const Add_Nurse = () => {
       setLoading(false);
       setNurseValue(InitData);
 
-      navigate("/");
+      navigate("/login");
     } catch(error){
       console.error("Error:", error);
       setLoading(false);
@@ -82,7 +82,7 @@ const Add_Nurse = () => {
   };
 
   if (data?.isAuthticated === false) {
-    return <Navigate to={"/"} />;
+    return <Navigate to={"/login"} />;
   }
 
   if (data?.user.userType !== "admin") {

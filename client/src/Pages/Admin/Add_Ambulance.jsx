@@ -48,7 +48,7 @@ const Add_Ambulance = () => {
   };
 
   if (data?.isAuthticated === false) {
-    return <Navigate to={"/"} />;
+    return <Navigate to={"/login"} />;
   }
 
   if (data?.user.userType !== "admin") {

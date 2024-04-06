@@ -26,7 +26,7 @@ const Beds_Rooms = () => {
   }, [dispatch]);
 
   if (data?.isAuthticated === false) {
-    return <Navigate to={"/"} />;
+    return <Navigate to={"/login"} />;
   }
 
   return (
