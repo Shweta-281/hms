@@ -58,12 +58,12 @@ const Add_Admin = () => {
       dispatch(SendPassword(data)).then((res) => notify("Account Detais Sent"));
       setloading(false);
       setAdminValue(InitData);
-      navigate("/login")
+      navigate("/")
     });
   };
 
   if (data?.isAuthticated === false) {
-    return <Navigate to={"/login"} />;
+    return <Navigate to={"/"} />;
   }
 
   if (data?.user.userType !== "admin") {

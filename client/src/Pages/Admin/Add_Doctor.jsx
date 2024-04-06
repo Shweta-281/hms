@@ -74,7 +74,7 @@ const Add_Doctor = () => {
       setLoading(false);
       setDoctorValue(initData);
 
-      navigate("/login")
+      navigate("/")
     } catch(error){
       console.error("Error:", error);
       setLoading(false);
@@ -83,7 +83,7 @@ const Add_Doctor = () => {
   };
 
   if (data?.isAuthticated === false) {
-    return <Navigate to={"/login"} />;
+    return <Navigate to={"/"} />;
   }
 
   if (data?.user.userType !== "admin") {

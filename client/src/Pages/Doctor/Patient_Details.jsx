@@ -36,7 +36,7 @@ const Patient_Details = () => {
   ];
 
   if (data?.isAuthticated === false) {
-    return <Navigate to={"/login"} />;
+    return <Navigate to={"/"} />;
   }
 
   if (data?.user.userType !== "doctor") {

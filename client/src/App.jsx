@@ -28,8 +28,7 @@ const App = () =>{
 
         {/* Main Part */}
         <Route path="/dashboard" element={<FrontPage/>}/>
-        <Route path="/" element={<FrontPage/>}/>
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
 
         {/* Patient Part */}
         <Route path="/addoctor" element={<Add_Doctor />}/>

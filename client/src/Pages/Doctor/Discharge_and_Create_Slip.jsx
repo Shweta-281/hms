@@ -84,7 +84,7 @@ const Discharge_and_Create_Slip = () => {
   };
 
   if (data?.isAuthticated === false) {
-    return <Navigate to={"/login"} />;
+    return <Navigate to={"/"} />;
   }
 
   if (data?.user.userType !== "doctor") {
