@@ -16,7 +16,7 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/register", async (req, res) => {
-  const { email } = req.body;
+  const { email} = req.body;
   try {
     const doctor = await DoctorModel.findOne({ email });
     if (doctor) {
@@ -26,7 +26,7 @@ router.post("/register", async (req, res) => {
     }
     let value = new DoctorModel(req.body);
     await value.save();
-    const data = await DoctorModel.findOne({ email });
+    const data = await DoctorModel.findOne({ email});
     return res.send({ data, message: "Registered" });
   } catch (error) {
     res.send({ message: "error" });

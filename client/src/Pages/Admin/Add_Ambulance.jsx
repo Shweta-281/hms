@@ -63,7 +63,7 @@ const Add_Ambulance = () => {
         <Sidebar />
         <div className="AfterSideBar">
           <div className="mainAmbupance">
-            <h1>Add Ambulance</h1>
+            <h1 style={{color:"rgb(27, 55, 241)"}}>Add Ambulance</h1>
             <div className="imagesection">
               <img
                 src={ambulance}

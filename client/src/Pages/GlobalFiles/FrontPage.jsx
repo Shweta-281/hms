@@ -8,7 +8,7 @@ import { FaAmbulance } from "react-icons/fa";
 import { RiAdminLine } from "react-icons/ri";
 import Sidebar from "./Sidebar";
 import "./CommonCSS.css";
-import { GetAllData, GetPatients } from '../../Redux/Data/action';
+import { GetAllData, GetPatients, GetBeds } from '../../Redux/Data/action';
 import { useDispatch, useSelector } from 'react-redux';
 
 
@@ -16,16 +16,18 @@ const FrontPage = () => {
   const columns = [
     { title: "Name", dataIndex: "patientName", key: "patientName" },
     { title: "Age", dataIndex: "age", key: "age" },
-    { title: "Mobile", dataIndex: "mobile", key: "mobile" },
     { title: "Disease", dataIndex: "disease", key: "disease" },
     { title: "Blood Group", dataIndex: "bloodGroup", key: "bloodGroup" },
     { title: "Department", dataIndex: "department", key: "department" },
+    { title: "Date", dataIndex: "date", key: "date" },
+    { title: "Contact Number", dataIndex: "contact", key: "contact" },
   ];
 
   const { patients } = useSelector((store) => store.data.patients);
   const {
     dashboard: { data },
   } = useSelector((store) => store.data);
+
 
   console.log(data);
 
@@ -34,6 +36,7 @@ const FrontPage = () => {
   useEffect(() => {
     dispatch(GetPatients());
     dispatch(GetAllData());
+    dispatch(GetBeds());
   }, []);
 
 

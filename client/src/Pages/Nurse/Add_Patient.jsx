@@ -39,7 +39,7 @@ const Add_Patient = () => {
     age: "",
     email: "",
     gender: "",
-    contact: "",
+    mobile: "",
     disease: "",
     address: "",
     department: "",
@@ -49,7 +49,6 @@ const Add_Patient = () => {
     password: "",
     nurseID: data?.user._id,
     docID: "",
-    details: "",
   };
   const [AddPatient, setAddPatient] = useState(InitData);
 
@@ -132,7 +131,7 @@ const Add_Patient = () => {
         <Sidebar />
         <div className="AfterSideBar">
           <div className="Main_Add_Doctor_div">
-            <h1>Add Patient</h1>
+            <h1 style={{color:"rgb(27, 55, 241)"}}>Add Patient</h1>
             <img src={doctor} alt="doctor" className="avatarimg" />
 
             <form onSubmit={HandleOnsubmitAppointment}>
@@ -183,7 +182,7 @@ const Add_Patient = () => {
                 <div className="inputdiv">
                   <input
                     type="date"
-                    placeholder="abc@abc.com"
+                    placeholder="Date"
                     name="date"
                     value={AddPatient.date}
                     onChange={HandleAppointment}
@@ -228,7 +227,7 @@ const Add_Patient = () => {
                 <div className="inputdiv">
                   <input
                     type="number"
-                    placeholder="Number"
+                    placeholder="Contact Number"
                     name="contact"
                     value={AddPatient.contact}
                     onChange={HandleAppointment}
@@ -237,19 +236,6 @@ const Add_Patient = () => {
                 </div>
               </div>
 
-              <div>
-                <label>Details</label>
-                <div className="inputdiv">
-                  <input
-                    type="text"
-                    placeholder="Details"
-                    name="details"
-                    value={AddPatient.details}
-                    onChange={HandleAppointment}
-                    required
-                  />
-                </div>
-              </div>
 
               <div>
                 <label>Disease</label>
@@ -373,7 +359,7 @@ const Add_Patient = () => {
                 <p>Password</p>
                 <div className="inputdiv">
                   <input
-                    type={"text"}
+                    type="text"
                     placeholder="Password"
                     name="password"
                     value={AddPatient.password}

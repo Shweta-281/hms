@@ -44,7 +44,7 @@ const Check_Appointment = () => {
         <Sidebar />
         <div className="AfterSideBar">
           <div className="Payment_Page">
-            <h1 style={{ marginBottom: "2rem" }}>Appointment Details</h1>
+            <h1 style={{ marginBottom: "2rem", color:"rgb(27, 55, 241)"}}>Appointment Details</h1>
             <div className="patientBox">
               <table>
                 <thead>

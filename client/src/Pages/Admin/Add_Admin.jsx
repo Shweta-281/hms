@@ -22,12 +22,10 @@ const Add_Admin = () => {
     DOB: "",
     address: "",
     education: "",
-    adminID: Date.now(),
+    adminID: "",
     password: "",
   };
   const [AdminValue, setAdminValue] = useState(InitData);
-
-  const navigate = useNavigate();
 
   const HandleDoctorChange = (e) => {
     setAdminValue({ ...AdminValue, [e.target.name]: e.target.value });
@@ -58,7 +56,6 @@ const Add_Admin = () => {
       dispatch(SendPassword(data)).then((res) => notify("Account Detais Sent"));
       setloading(false);
       setAdminValue(InitData);
-      navigate("/")
     });
   };
 
@@ -78,7 +75,7 @@ const Add_Admin = () => {
         <Sidebar />
         <div className="AfterSideBar">
           <div className="Main_Add_Doctor_div">
-            <h1>Add Admin</h1>
+            <h1 style={{color:"rgb(27, 55, 241)"}}>Add Admin</h1>
             <img src={admin} alt="doctor" className="avatarimg" />
             <form onSubmit={HandleDoctorSubmit}>
               <div>

@@ -76,7 +76,7 @@ const Book_Appointment = () => {
         <Sidebar />
         <div className="AfterSideBar">
           <div className="Main_Add_Doctor_div">
-            <h1>Book Appointment</h1>
+            <h1 style={{color:"rgb(27, 55, 241)"}}>Book Appointment</h1>
             <form onSubmit={HandleOnsubmitAppointment}>
               {/* Name PlaceHolder */}
               <div>

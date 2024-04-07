@@ -11,7 +11,7 @@
 .imagesection {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-oddly;
   align-items: center;
   margin: 3rem 0rem;
 }
@@ -48,14 +48,16 @@ table {
 
 td,
 th {
-  border: 1px solid #dddddd;
+  border: 1px solid #d8dbf1;
   text-align: left;
   padding: 8px;
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd92;
+tr:nth-child(odd) {
+  background-color: rgb(232, 233, 241);
 }
+
+
 
 /* ***************************************************************** */
 

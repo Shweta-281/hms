@@ -54,7 +54,7 @@ const Add_Beds = () => {
         <Sidebar />
         <div className="AfterSideBar">
           <div className="mainAmbupance">
-            <h1>Add Beds</h1>
+            <h1 style={{color:"rgb(27, 55, 241)"}}>Add Beds</h1>
 
             {/* ******************************************************** */}
             <form onSubmit={HandleAmbuSubmit}>

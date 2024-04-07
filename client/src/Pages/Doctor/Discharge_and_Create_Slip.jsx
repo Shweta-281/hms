@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React, { useState } from 'react'
 import Sidebar from '../GlobalFiles/Sidebar'
 import { ToastContainer, toast } from 'react-toastify'
@@ -97,7 +98,7 @@ const Discharge_and_Create_Slip = () => {
         <Sidebar />
         <div className="AfterSideBar">
           <div className="Main_Add_Doctor_div">
-            <h1>Create Report</h1>
+            <h1 style={{color:'rgb(27, 55, 241)'}}>Create Report</h1>
             <form>
               <div>
                 <label>Doctor Name</label>

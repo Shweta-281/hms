@@ -28,12 +28,9 @@ const Add_Nurse = () => {
     department: "",
     nurseID: Date.now(),
     password: "",
-    details: "",
     bloodGroup: "",
   };
   const [NurseValue, setNurseValue] = useState(InitData);
-
-  const navigate = useNavigate();
 
   const HandleDoctorChange = (e) => {
     setNurseValue({ ...NurseValue, [e.target.name]: e.target.value });
@@ -73,7 +70,6 @@ const Add_Nurse = () => {
       setLoading(false);
       setNurseValue(InitData);
 
-      navigate("/");
     } catch(error){
       console.error("Error:", error);
       setLoading(false);
@@ -96,7 +92,7 @@ const Add_Nurse = () => {
         <Sidebar />
         <div className="AfterSideBar">
           <div className="Main_Add_Doctor_div">
-            <h1>Add Nurse</h1>
+            <h1 style={{color:"rgb(27, 55, 241)"}}>Add Nurse</h1>
             <img src={nurse} alt="doctor" className="avatarimg" />
             <form onSubmit={HandleDoctorSubmit}>
               <div>
@@ -125,6 +121,7 @@ const Add_Nurse = () => {
                   />
                 </div>
               </div>
+              
               <div>
                 <label>Contact Number</label>
                 <div className="inputdiv">
@@ -242,21 +239,7 @@ const Add_Nurse = () => {
                   />
                 </div>
               </div>
-              <div>
-                <label>Other Info</label>
-                <div className="inputdiv">
-                  <textarea
-                    type="text"
-                    placeholder="Extra Info"
-                    rows="4"
-                    cols="50"
-                    name="details"
-                    value={NurseValue.details}
-                    onChange={HandleDoctorChange}
-                    required
-                  />
-                </div>
-              </div>
+              
               <button type="submit" className="formsubmitbutton">
                 {loading ? "Loading..." : "Submit"}
               </button>

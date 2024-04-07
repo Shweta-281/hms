@@ -35,7 +35,7 @@ const Beds_Rooms = () => {
         <Sidebar />
         <div className="AfterSideBar">
           <div className="Payment_Page">
-            <h1 style={{ marginBottom: "2rem" }}>All Beds</h1>
+            <h1 style={{ marginBottom: "2rem" ,color:"rgb(27, 55, 241)"}}>All Beds</h1>
             <div className="patientBox">
               <table>
                 <thead>

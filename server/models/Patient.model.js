@@ -15,9 +15,9 @@ const patientSchema = mongoose.Schema({
     type: String,
   },
 
-  mobile: {
+  contact: {
     type: Number,
-    minlength: 10,
+    maxlength: 10,
   },
 
   email: {
@@ -30,6 +30,10 @@ const patientSchema = mongoose.Schema({
   },
 
   age: {
+    type: Number,
+  },
+
+  bedNumber: {
     type: Number,
   },
 
@@ -72,6 +76,7 @@ const patientSchema = mongoose.Schema({
 
   date: {
     type: Date,
+    default: new Date(),
   },
 
   docEmail: {

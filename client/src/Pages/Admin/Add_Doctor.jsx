@@ -30,11 +30,10 @@ const Add_Doctor = () => {
     department: "",
     docID: Date.now(),
     password: "",
-    details: "",
   };
   const [DoctorValue, setDoctorValue] = useState(initData);
 
-  const navigate = useNavigate();
+
 
   const HandleDoctorChange = (e) => {
     setDoctorValue({ ...DoctorValue, [e.target.name]: e.target.value });
@@ -73,8 +72,6 @@ const Add_Doctor = () => {
       notify("Account Detais Sent");
       setLoading(false);
       setDoctorValue(initData);
-
-      navigate("/")
     } catch(error){
       console.error("Error:", error);
       setLoading(false);
@@ -98,7 +95,7 @@ const Add_Doctor = () => {
         <Sidebar />
         <div className="AfterSideBar">
           <div className="Main_Add_Doctor_div">
-            <h1>Add Doctors</h1>
+            <h1 style={{color:"rgb(27, 55, 241)"}}>Add Doctors</h1>
             <img src={doctor} alt="doctor" className="avatarimg" />
             <form onSubmit={HandleDoctorSubmit}>
               <div>
@@ -264,21 +261,7 @@ const Add_Doctor = () => {
                   />
                 </div>
               </div>
-              <div>
-                <label>Other Details</label>
-                <div className="inputdiv">
-                  <textarea
-                    type="text"
-                    placeholder="Extra Info"
-                    rows="4"
-                    cols="50"
-                    name="details"
-                    value={DoctorValue.details}
-                    onChange={HandleDoctorChange}
-                    required
-                  />
-                </div>
-              </div>
+      
               <button type="submit" className="formsubmitbutton">
                 {loading ? "Loading..." : "Submit"}
               </button>
