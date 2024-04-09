@@ -17,7 +17,6 @@ const patientSchema = mongoose.Schema({
 
   contact: {
     type: Number,
-    maxlength: 10,
   },
 
   email: {
