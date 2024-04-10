@@ -18,5 +18,16 @@ Key Features Like:
 
 ## Use Credentials:-
 Admin ID: 500  Password: admin
+
 Nurse ID: 500  Password: nurse
+
 Doctor ID: 500 Password: doctor
+
+![image](https://github.com/Shweta-281/hms/assets/144674061/1a5a333b-c25c-4c3e-ace7-ad600c85e72e)
+
+![image](https://github.com/Shweta-281/hms/assets/144674061/2dcd6981-faea-485d-8239-bca97bf141df)
+
+![image](https://github.com/Shweta-281/hms/assets/144674061/0b927054-5f4c-49d9-b2a5-2de31a376e3f)
+
+
+
