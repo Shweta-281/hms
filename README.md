@@ -1,4 +1,4 @@
-## Welcome to our Hospital Management System!
+# Welcome to our Hospital Management System!
 
 Our hospital management system is designed to streamline the operations of your healthcare facility, making it easier for patients to book appointments and for administrators to manage doctors and other resources effectively.
 
@@ -16,7 +16,7 @@ Key Features Like:
 
 5. Reporting: Gain insights into hospital operations with customizable reports improve.
 
-# Use Credentials:-
+## Use Credentials:-
 Admin ID: 500  Password: admin
 Nurse ID: 500  Password: nurse
 Doctor ID: 500 Password: doctor
