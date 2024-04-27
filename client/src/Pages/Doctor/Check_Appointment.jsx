@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import React, { useEffect } from 'react'
 import Sidebar from '../GlobalFiles/Sidebar';
 import { useDispatch, useSelector } from 'react-redux';
@@ -60,6 +59,7 @@ const Check_Appointment = () => {
                 <tbody>
                   {AllAppointment?.map((ele) => {
                     return (
+                      // eslint-disable-next-line react/jsx-key
                       <tr>
                         <td>{ele.patientName}</td>
                         <td>{ele.mobile}</td>

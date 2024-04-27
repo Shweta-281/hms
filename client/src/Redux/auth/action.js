@@ -89,7 +89,7 @@ export const DoctorRegister = (data) => async (dispatch) => {
   try {
     dispatch({ type: types.REGISTER_DOCTOR_REQUEST });
     const res = await axios.post(
-      "https://server-vxvo.vercel.app/register",
+      "https://server-vxvo.vercel.app/doctors/register",
       data
     );
     console.log(res);

@@ -22,7 +22,7 @@ const Add_Admin = () => {
     DOB: "",
     address: "",
     education: "",
-    adminID: "",
+    adminID: Date.now(),
     password: "",
   };
   const [AdminValue, setAdminValue] = useState(InitData);
@@ -185,6 +185,7 @@ const Add_Admin = () => {
                   />
                 </div>
               </div>
+
               <div>
                 <label>Password</label>
                 <div className="inputdiv">

@@ -289,11 +289,11 @@ export const GetAllAppointment = () => async (dispatch) => {
       `https://server-vxvo.vercel.app/appointments`
     );
     console.log(res.data);
-    // return res.data;
-    dispatch({
-      type: types.GET_APPOINTMENT_DETAILS_SUCCESS,
-      payload: res.data,
-    });
+    return res.data;
+    // dispatch({
+    //   type: types.GET_APPOINTMENT_DETAILS_SUCCESS,
+    //   payload: res.data,
+    // });
   } catch (error) {
     console.log(error);
   }
