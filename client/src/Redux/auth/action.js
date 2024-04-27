@@ -6,7 +6,7 @@ export const NurseLogin = (data) => async (dispatch) => {
   try {
     dispatch({ type: types.LOGIN_NURSE_REQUEST });
     const res = await axios.post(
-      "https://server-vxvo.vercel.app/nurses/login",
+      "https://server-mu-five-58.vercel.app/nurses/login",
       data
     );
     dispatch({
@@ -33,7 +33,7 @@ export const DoctorLogin = (data) => async (dispatch) => {
   try {
     dispatch({ type: types.LOGIN_DOCTOR_REQUEST });
     const res = await axios.post(
-      "https://server-vxvo.vercel.app/doctors/login",
+      "https://server-mu-five-58.vercel.app/doctors/login",
       data
     );
     console.log(res.data);
@@ -61,7 +61,7 @@ export const AdminLogin = (data) => async (dispatch) => {
   try {
     dispatch({ type: types.LOGIN_ADMIN_REQUEST });
     const res = await axios.post(
-      "https://server-vxvo.vercel.app/admin/login",
+      "https://server-mu-five-58.vercel.app/admin/login",
       data
     );
     console.log(res.data);
@@ -89,7 +89,7 @@ export const DoctorRegister = (data) => async (dispatch) => {
   try {
     dispatch({ type: types.REGISTER_DOCTOR_REQUEST });
     const res = await axios.post(
-      "https://server-vxvo.vercel.app/doctors/register",
+      "https://server-mu-five-58.vercel.app/doctors/register",
       data
     );
     console.log(res);
@@ -119,7 +119,7 @@ export const NurseRegister = (data) => async (dispatch) => {
   try {
     dispatch({ type: types.REGISTER_NURSE_REQUEST });
     const res = await axios.post(
-      "https://server-vxvo.vercel.app/nurses/register",
+      "https://server-mu-five-58.vercel.app/nurses/register",
       data
     );
     console.log(res);
@@ -149,7 +149,7 @@ export const AdminRegister = (data) => async (dispatch) => {
   try {
     dispatch({ type: types.REGISTER_ADMIN_REQUEST });
     const res = await axios.post(
-      "https://server-vxvo.vercel.app/admin/register",
+      "https://server-mu-five-58.vercel.app/admin/register",
       data
     );
     console.log(res);
@@ -179,7 +179,7 @@ export const AmbulanceRegister = (data) => async (dispatch) => {
   try {
     dispatch({ type: types.REGISTER_AMBULANCE_REQUEST });
     const res = await axios.post(
-      "https://server-vxvo.vercel.app/ambulances/add",
+      "https://server-mu-five-58.vercel.app/ambulances/add",
       data
     );
     console.log(res);
@@ -218,7 +218,7 @@ export const UpdateNurse = (data, id) => async (dispatch) => {
   try {
     dispatch({ type: types.EDIT_NURSE_REQUEST });
     const res = await axios.patch(
-      `https://server-vxvo.vercel.app/nurses/${id}`,
+      `https://server-mu-five-58.vercel.app/nurses/${id}`,
       data
     );
     console.log(res);
@@ -233,7 +233,7 @@ export const UpdateDoctor = (data, id) => async (dispatch) => {
   try {
     dispatch({ type: types.EDIT_DOCTOR_REQUEST });
     const res = await axios.patch(
-      `https://server-vxvo.vercel.app/doctors/${id}`,
+      `https://server-mu-five-58.vercel.app/doctors/${id}`,
       data
     );
     console.log(res);
@@ -248,7 +248,7 @@ export const SendPassword = (data) => async (dispatch) => {
   try {
     dispatch({ type: types.EDIT_DOCTOR_REQUEST });
     const res = await axios.post(
-      `https://server-vxvo.vercel.app/admin/password`,
+      `https://server-mu-five-58.vercel.app/admin/password`,
       data
     );
     // console.log(res);\
@@ -263,7 +263,7 @@ export const forgetPassword = (data) => async (dispatch) => {
   try {
     dispatch({ type: types.FORGET_PASSWORD_REQUEST });
     const res = await axios.post(
-      `https://server-vxvo.vercel.app/admin/forgot`,
+      `https://server-mu-five-58.vercel.app/admin/forgot`,
       data
     );
     // console.log(res);
