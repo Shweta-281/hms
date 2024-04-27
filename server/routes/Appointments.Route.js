@@ -1,5 +1,5 @@
 const express = require("express");
-const { AppointmentModel } = require("../models/Apppointment.model");
+const { AppointmentModel } = require("../models/Appointment.model");
 
 const router = express.Router();
 
@@ -19,10 +19,11 @@ router.post("/create", async (req, res) => {
   try {
     const appointment = new AppointmentModel(payload);
     await appointment.save();
+    
+  res.send({ message: "Appointment successfully booked.", appointment});
   } catch (error) {
     res.send(error);
   }
-  res.send("Appointment successfully booked.");
 });
 
 router.patch("/:appointmentId", async (req, res) => {

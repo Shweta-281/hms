@@ -23,6 +23,7 @@ app.get("/", (req, res) => {
   res.send("Homepage");
 });
 
+
 app.use("/admin", adminRouter);
 app.use("/ambulances", ambulanceRouter);
 app.use("/appointments", appointmentRouter);

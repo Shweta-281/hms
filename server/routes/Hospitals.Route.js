@@ -1,7 +1,7 @@
 const express = require("express");
 const { AdminModel } = require("../models/Admin.model");
 const { AmbulanceModel } = require("../models/Ambulance.model");
-const { AppointmentModel } = require("../models/Apppointment.model");
+const { AppointmentModel } = require("../models/Appointment.model");
 const { BedModel } = require("../models/Bed.model");
 const { DoctorModel } = require("../models/Doctor.model");
 const { NurseModel } = require("../models/Nurse.model");

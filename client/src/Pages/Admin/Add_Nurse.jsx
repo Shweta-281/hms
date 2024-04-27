@@ -66,7 +66,6 @@ const Add_Nurse = () => {
 
       console.log(data, "NURSE REGISTER SUCCESSFULLY");
       await dispatch(SendPassword(data));
-      notify("Account Detais Sent");
       setLoading(false);
       setNurseValue(InitData);
 
@@ -96,7 +95,7 @@ const Add_Nurse = () => {
             <img src={nurse} alt="doctor" className="avatarimg" />
             <form onSubmit={HandleDoctorSubmit}>
               <div>
-                <label> Name</label>
+                <label>Nurse Name</label>
                 <div className="inputdiv">
                   <input
                     type="text"

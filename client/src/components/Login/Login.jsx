@@ -193,6 +193,7 @@ const Login = () => {
                 name="ID"
                 value={formvalue.ID}
                 onChange={Handlechange}
+                placeholder='123'
                 required
               />
               <h3>Password</h3>
@@ -201,6 +202,7 @@ const Login = () => {
                 name="password"
                 value={formvalue.password}
                 onChange={Handlechange}
+                placeholder="hms"
                 required
               />
               <button type="submit">{Loading ? "Loading..." : "Submit"}</button>
