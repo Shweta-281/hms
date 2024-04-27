@@ -193,7 +193,7 @@ const Login = () => {
                 name="ID"
                 value={formvalue.ID}
                 onChange={Handlechange}
-                placeholder="123"
+                placeholder="e.g. 123"
                 required
               />
               <h3>Password</h3>
